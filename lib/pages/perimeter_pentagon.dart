@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 //Encargado: Sebastian Zuluaga Correa
+//Inicio de modificaciones Sebas
 
 class PerimeterPentagon extends StatefulWidget {
   const PerimeterPentagon({super.key});
