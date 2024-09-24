@@ -41,90 +41,100 @@ class _DrawerPageState extends State<DrawerPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Figuras Geometricas"),
+        title: const Text("Figuras Geométricas"),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
-      drawer: ListView(
-        children: [
-          const DrawerHeader(
-            decoration: BoxDecoration(color: Colors.blue),
-            child: Text("Figuras Geometricas"),
+      drawer: SizedBox(
+        width: MediaQuery.of(context).size.width * 0.75, // Ocupa el 75% del ancho
+        child: Drawer(
+          child: ListView(
+            children: [
+              const DrawerHeader(
+                decoration: BoxDecoration(color: Colors.blue),
+                child: Text("Figuras Geométricas",
+                  style: TextStyle(
+                    color: Colors.black, // Texto en negro
+                    fontSize: 20, // Tamaño de fuente
+                    fontWeight: FontWeight.bold,
+                  ),),
+              ),
+          
+              ListTile(
+                leading: const Icon(Icons.circle_rounded),
+                title: const Text("Área Círculo"),
+                onTap:(){
+                  _onItemTapped(0);
+                  Navigator.pop(context);
+                },
+              ),
+          
+              ListTile(
+                leading: const Icon(Icons.circle_outlined),
+                title: const Text("Perímetro Círculo"),
+                onTap:(){
+                  _onItemTapped(1);
+                  Navigator.pop(context);
+                },
+              ),
+          
+              ListTile(
+                leading: const Icon(Icons.square),
+                title: const Text("Área Cuadrado"),
+                onTap:(){
+                  _onItemTapped(2);
+                  Navigator.pop(context);
+                },
+              ),
+          
+              ListTile(
+                leading: const Icon(Icons.square_outlined),
+                title: const Text("Perímetro cuadrado"),
+                onTap:(){
+                  _onItemTapped(3);
+                  Navigator.pop(context);
+                },
+              ),
+          
+              ListTile(
+                leading: const Icon(Icons.change_history),
+                title: const Text("Área Triángulo"),
+                onTap:(){
+                  _onItemTapped(4);
+                  Navigator.pop(context);
+                },
+              ),
+          
+              ListTile(
+                leading: const Icon(Icons.change_history),
+                title: const Text("Perímetro Triángulo"),
+                onTap:(){
+                  _onItemTapped(5);
+                  Navigator.pop(context);
+                },
+              ),
+          
+              ListTile(
+                leading: const Icon(Icons.pentagon),
+                title: const Text("Área Pentágono"),
+                onTap:(){
+                  _onItemTapped(6);
+                  Navigator.pop(context);
+                },
+              ),
+          
+              ListTile(
+                leading: const Icon(Icons.pentagon_outlined),
+                title: const Text("Perímetro Pentágono"),
+                onTap:(){
+                  _onItemTapped(7);
+                  Navigator.pop(context);
+                },
+              ),
+            ],
           ),
-
-          ListTile(
-            leading: const Icon(Icons.list),
-            title: const Text("Area Circulo"),
-            onTap:(){
-              _onItemTapped(0);
-              Navigator.pop(context);
-            },
-          ),
-
-          ListTile(
-            leading: const Icon(Icons.api),
-            title: const Text("Perimetro Circulo"),
-            onTap:(){
-              _onItemTapped(1);
-              Navigator.pop(context);
-            },
-          ),
-
-          ListTile(
-            leading: const Icon(Icons.favorite),
-            title: const Text("Area Cuadrado"),
-            onTap:(){
-              _onItemTapped(2);
-              Navigator.pop(context);
-            },
-          ),
-
-          ListTile(
-            leading: const Icon(Icons.person),
-            title: const Text("Perimetro cuadrado"),
-            onTap:(){
-              _onItemTapped(3);
-              Navigator.pop(context);
-            },
-          ),
-
-          ListTile(
-            leading: const Icon(Icons.list),
-            title: const Text("Area Triangulo"),
-            onTap:(){
-              _onItemTapped(4);
-              Navigator.pop(context);
-            },
-          ),
-
-          ListTile(
-            leading: const Icon(Icons.list),
-            title: const Text("Perimetro Triangulo"),
-            onTap:(){
-              _onItemTapped(5);
-              Navigator.pop(context);
-            },
-          ),
-
-          ListTile(
-            leading: const Icon(Icons.list),
-            title: const Text("Area Pentagono"),
-            onTap:(){
-              _onItemTapped(6);
-              Navigator.pop(context);
-            },
-          ),
-
-          ListTile(
-            leading: const Icon(Icons.list),
-            title: const Text("Perimetro Pentagono"),
-            onTap:(){
-              _onItemTapped(7);
-              Navigator.pop(context);
-            },
-          ),
-        ],
+        ),
       ),
     );
   }
