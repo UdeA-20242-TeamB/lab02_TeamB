@@ -230,7 +230,7 @@ class _DrawerPageState extends State<DrawerPage> {
             ),
             ListTile(
               leading: const Icon(
-                Icons.star,
+                Icons.pentagon,
                 color: Colors.pink,
               ),
               title: const Text(
@@ -247,7 +247,7 @@ class _DrawerPageState extends State<DrawerPage> {
             ),
             ListTile(
               leading: const Icon(
-                Icons.star_border,
+                Icons.pentagon_outlined,
                 color: Colors.greenAccent,
               ),
               title: const Text(
