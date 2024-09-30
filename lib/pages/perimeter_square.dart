@@ -13,7 +13,14 @@ class _PerimeterSquareState extends State<PerimeterSquare> {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text("Perimetro Cuadrado"),
+        child:
+        Column(
+          children: [
+            Text("Perimetro cuadrado"),
+            Text("Encargado: Santiago Caceres Vasquez"),
+            Text("No realizó la funcionalidad"),
+          ],
+        )
       ),
     );
   }

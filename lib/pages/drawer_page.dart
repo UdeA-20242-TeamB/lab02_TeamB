@@ -74,7 +74,7 @@ class _DrawerPageState extends State<DrawerPage> {
                   return AlertDialog(
                     title: const Text('Información'),
                     content: const Text(
-                        'Esta es una aplicación para calcular áreas y perímetros de distintas figuras geométricas. Realizado por un grupo de 8 integrantes a través del control de versiones de GitHub.'),
+                        'Esta es una aplicación para calcular áreas y perímetros de distintas figuras geométricas. Realizado por un grupo de 6 integrantes a través del control de versiones de GitHub.'),
                     actions: [
                       TextButton(
                         child: const Text('Cerrar'),

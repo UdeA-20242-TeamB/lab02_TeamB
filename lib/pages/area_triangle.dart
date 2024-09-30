@@ -13,7 +13,14 @@ class _AreaTriangleState extends State<AreaTriangle> {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text("Area Triangulo"),
+        child:
+          Column(
+            children: [
+              Text("Area Triangulo"),
+              Text("Encargado: John Edisson Chamorro Coral"),
+              Text("No realizó la funcionalidad"),
+            ],
+          )
       ),
     );
   }

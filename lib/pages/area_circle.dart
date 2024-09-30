@@ -25,10 +25,6 @@ class _AreaCircleState extends State<AreaCircle> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(
-          Icons.favorite, // Ícono de corazón vacío
-          color: Colors.white,    // Color blanco
-        ),
         title: const Center(
           child: Text(
             'Area del circulo',
@@ -40,6 +36,7 @@ class _AreaCircleState extends State<AreaCircle> {
             ),
           ),
         ),
+        centerTitle: true,
         backgroundColor: Colors.teal,
       ),
       body: Padding(
